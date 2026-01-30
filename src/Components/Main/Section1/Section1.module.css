@@ -1,0 +1,42 @@
+/* MOBILE */
+@media only screen and (max-width: 480px) {
+  .Section1 {
+    height: 100svh;
+
+    background:
+      url("./assets/Rectangle-M-1.svg") 0 -40px / 120svw auto no-repeat,
+      url("./assets/Rectangle-M-2.svg") -50px 560px / 120svw auto no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .PhoneImage {
+    width: 400px;
+    margin: 100px 0 80px;
+  }
+
+  .MenuButton {
+    position: absolute;
+    inset: 0 auto auto 0;
+    margin: 30px 25px;
+    width: 30px;
+  }
+
+  .DownloadButton {
+    width: 80%;
+    height: 56px;
+    background-color: #3873ca;
+
+    font-size: 20px;
+    color: white;
+
+    border-radius: 20px;
+    box-shadow: #2d548d 0 4px 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

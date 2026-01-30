@@ -1,0 +1,13 @@
+/* MOBILE */
+@media only screen and (max-width: 480px) {
+  .BackgroundImage {
+    width: 100vw;
+    height: 800px;
+
+    background: url("./Rectangle-M.png") 0px 0px / 100svw 600px no-repeat;
+
+    position: absolute;
+    z-index: -999;
+    translate: 0px -350px;
+  }
+}

@@ -1,0 +1,70 @@
+.Card {
+  width: 256px;
+  min-width: 256px;
+  min-height: 300px;
+  background-color: #fff;
+
+  text-align: justify;
+
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 15px 10px;
+
+  gap: 15px;
+}
+
+.PeopleCardContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .Image {
+    border-radius: 50%;
+    margin-bottom: 45px;
+  }
+
+  .Name,
+  .Stack {
+    text-align: start;
+    width: inherit;
+    margin-left: 5px;
+  }
+  .Name {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .LinkedInLogo {
+    width: 55px;
+    height: 55px;
+    background-color: var(--secondaryBackgroundColor);
+
+    padding: 10px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    translate: 80px 15px;
+
+    img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
+
+.InformationCardContent {
+  padding: 10px;
+
+  text-indent: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  img {
+    aspect-ratio: 10 / 10;
+  }
+}

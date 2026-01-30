@@ -1,0 +1,12 @@
+/* MOBILE */
+@media only screen and (max-width: 480px) {
+  .Section3 {
+    height: 50svh;
+
+    padding: 50px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

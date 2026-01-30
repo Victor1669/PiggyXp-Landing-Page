@@ -1,0 +1,25 @@
+@media only screen and (max-width: 480px) {
+  .Section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BrowserSearchContainer {
+    width: 65svw;
+    position: relative;
+    margin-top: 100px;
+
+    img {
+      width: 100%;
+    }
+
+    p {
+      width: 50%;
+
+      position: absolute;
+      top: 33%;
+      left: 4%;
+    }
+  }
+}

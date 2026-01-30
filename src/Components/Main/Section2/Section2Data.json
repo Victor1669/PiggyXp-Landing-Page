@@ -1,0 +1,16 @@
+[
+  {
+    "imgWidth": 60,
+    "cardType": "information",
+    "imgSrc": "/src/Components/Main/Section2/Part2/assets/Mission.svg",
+    "imgAlt": "Ícone de um alvo com um dardo, simbolizando uma missão",
+    "text": "Nossa missão é desenvolver softwares sólidos e confiáveis, atuando como parceiros estratégicos dos nossos clientes para entregar soluções que gerem valor real."
+  },
+  {
+    "imgWidth": 60,
+    "cardType": "information",
+    "imgSrc": "/src/Components/Main/Section2/Part2/assets/Vision.svg",
+    "imgAlt": "Ícone de um foguete, simbolizando uma visão",
+    "text": "Nossa visão é evoluir além do presente, transformando ideias em soluções e desafios em oportunidades, sempre olhando para o futuro."
+  }
+]
