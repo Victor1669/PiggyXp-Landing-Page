@@ -1,10 +1,10 @@
 /* MOBILE */
 @media only screen and (max-width: 480px) {
   .Footer {
-    height: 50svh;
-    padding-top: 100px;
+    height: 60svh;
+    padding-top: 140px;
 
-    background: url("./Rectangle-M-2.svg") -100px 0px / 124svw 55svh no-repeat;
+    background: url("./Rectangle-M-2.svg") -100px 0px / 150svw 65svh no-repeat;
 
     display: grid;
     place-content: center;

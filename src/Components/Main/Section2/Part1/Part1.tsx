@@ -4,6 +4,8 @@ import { useInView } from "framer-motion";
 
 import { useScreenVerifier } from "../../../../Contexts/useScreenVerifier";
 
+import Styles from "./Part1.module.css";
+
 import { Card } from "../../../Card/Card";
 import BrowserSearchContainer from "./BrowserSearchContainer";
 
@@ -55,14 +57,16 @@ export default function Section2Part1() {
 
   if (!isDesktop) {
     return (
-      <Card
-        ref={ref}
-        enableAnimation={true}
-        cardType="information"
-        img={{ src: PiggyXpLogo, alt: "Logo da PiggyXp", width: 100 }}
-      >
-        {paragraph}
-      </Card>
+      <div className={Styles.Part1}>
+        <Card
+          ref={ref}
+          enableAnimation={true}
+          cardType="information"
+          img={{ src: PiggyXpLogo, alt: "Logo da PiggyXp", width: 100 }}
+        >
+          {paragraph}
+        </Card>
+      </div>
     );
   }
 }

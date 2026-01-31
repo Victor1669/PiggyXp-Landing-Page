@@ -30,7 +30,6 @@ export default function useGetUsersInfo() {
           const avatar_url = userImagesArray[i].avatar_url;
           const linkedin = UsersArray[i].linkedin;
           const stack = UsersArray[i].stack;
-          console.log(stack);
 
           return { name, avatar_url, linkedin, stack };
         },

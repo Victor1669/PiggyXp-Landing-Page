@@ -1,9 +1,9 @@
 /* MOBILE */
 @media only screen and (max-width: 480px) {
   .Section3 {
-    height: 50svh;
+    height: 48svh;
 
-    padding: 50px 0;
+    padding: 60px 0 10px;
 
     display: flex;
     justify-content: center;

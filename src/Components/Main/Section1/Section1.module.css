@@ -14,14 +14,18 @@
 
   .PhoneImage {
     width: 400px;
-    margin: 100px 0 80px;
+    margin: 140px 0 80px;
   }
 
   .MenuButton {
-    position: absolute;
+    width: 70px;
+    mix-blend-mode: difference;
+
+    position: fixed;
     inset: 0 auto auto 0;
-    margin: 30px 25px;
-    width: 30px;
+
+    margin: 20px 15px;
+    padding: 20px;
   }
 
   .DownloadButton {

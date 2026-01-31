@@ -9,10 +9,10 @@ const { contato, projeto, sobreNos, time } = TabBarImages;
 export default function NavigationContainer() {
   return (
     <nav className={Styles.NavigationContainer}>
-      <NavigationButton imgSrc={projeto} text="Projeto" layer={2} />
-      <NavigationButton imgSrc={sobreNos} text="Sobre nós" layer={3} />
-      <NavigationButton imgSrc={time} text="Equipe" layer={4} />
-      <NavigationButton imgSrc={contato} text="Contato" layer={6} />
+      <NavigationButton imgSrc={projeto} text="Projeto" top={700} />
+      <NavigationButton imgSrc={sobreNos} text="Sobre nós" top={1140} />
+      <NavigationButton imgSrc={time} text="Equipe" top={1495} />
+      <NavigationButton imgSrc={contato} text="Contato" top={2100} />
     </nav>
   );
 }
@@ -20,10 +20,10 @@ export default function NavigationContainer() {
 interface NavigationButtonProps {
   text: string;
   imgSrc: string;
-  layer: 1 | 2 | 3 | 4 | 5 | 6;
+  top: number;
 }
 
-function NavigationButton({ text, imgSrc, layer }: NavigationButtonProps) {
+function NavigationButton({ text, imgSrc, top }: NavigationButtonProps) {
   const { setShowMenu } = useShowMenu();
   return (
     <div className={Styles.NavigationButton}>
@@ -33,7 +33,7 @@ function NavigationButton({ text, imgSrc, layer }: NavigationButtonProps) {
           setShowMenu(false);
           scrollTo({
             behavior: "smooth",
-            top: window.innerHeight * (layer - 1),
+            top,
           });
         }}
       >

@@ -13,6 +13,7 @@ export default function Logo() {
   function handleClick() {
     if (screenType === "mobile") {
       setShowMenu((sm) => !sm);
+      window.scrollTo({ behavior: "smooth", top: 0 });
     } else {
       window.scrollTo({ behavior: "smooth", top: 0 });
     }

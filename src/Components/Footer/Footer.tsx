@@ -16,7 +16,18 @@ export default function Footer() {
       </span>
       <span>
         <img width={60} src={GitHub} alt="Logo da GitHub" />
-        <p>code</p>
+        <a
+          href="https://github.com/Victor1669/PiggyXp-FrontEnd
+"
+        >
+          Repositório do Front-End
+        </a>
+        <a href="https://github.com/pietros133/Piggyxp---Backend">
+          Repositório do Back-End
+        </a>
+        <a href="https://github.com/Victor1669/PiggyXp-Landing-Page">
+          Repositório dessa página
+        </a>
       </span>
       <small>&copy; 2025–2027 VSS. Todos os direitos reservados.</small>
     </footer>
