@@ -1,7 +1,7 @@
 /* MOBILE */
 @media only screen and (max-width: 480px) {
   .Section2 {
-    height: 90svh;
+    padding-top: 40px;
 
     display: flex;
     flex-direction: column;

@@ -1,23 +1,32 @@
 [
   {
-    "cardType": "information",
-    "imgSrc": "/Section4/Money.svg",
-    "imgAlt": "Imagem de notas de dinheiro, representando o controle sobre o dinheiro",
-    "imgWidth": 80,
-    "text": "Aprenda a economizar, planejar e tomar decisões financeiras melhores."
+    "name": "Pietro Santos Miranda",
+    "username": "pietros133",
+    "linkedin": "https://www.linkedin.com/in/pietro-miranda-09472b341/",
+    "stack": "Back-End | Designer"
   },
   {
-    "cardType": "information",
-    "imgSrc": "/Section4/Evolution.svg",
-    "imgAlt": "Imagem de um raio, simbolizando a evolução",
-    "imgWidth": 80,
-    "text": "Ganhe XP, complete missões e desenvolva hábitos financeiros inteligentes."
+    "name": "Vinicius Xavier",
+    "username": "ViniciusXavier-29",
+    "linkedin": "https://www.linkedin.com/in/vinicius-xavier-965318254/",
+    "stack": "Back-End"
   },
   {
-    "cardType": "information",
-    "imgSrc": "/Section4/Playing.svg",
-    "imgAlt": "Imagem de um controle de video-game, representando a experiência do aplicativo, que é jogando.",
-    "imgWidth": 80,
-    "text": "Transforme o aprendizado financeiro em uma experiência divertida e interativa."
+    "name": "Victor Pereira",
+    "username": "ELVICTOR1",
+    "linkedin": "https://www.linkedin.com/in/victor-pereira-2947a1254/",
+    "stack": "Front-End"
+  },
+  {
+    "name": "Victor Fernandes",
+    "username": "Victor1669",
+    "linkedin": "https://www.linkedin.com/in/victorfernandes1669/",
+    "stack": "Front-End"
+  },
+  {
+    "name": "Ryan",
+    "username": "eyanprogh",
+    "linkedin": "https://www.linkedin.com/in/ryan-s%C3%A9rgio-453a80386/",
+    "stack": "Back-End"
   }
 ]

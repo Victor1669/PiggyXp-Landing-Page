@@ -6,13 +6,13 @@ interface ScreenVerifierProviderProps {
   children: React.ReactNode;
 }
 
-type ScreenVerifierValueType = {
+type ScreenVerifierValueTypes = {
   screenType: ScreenType;
   screenSize: number;
 };
 
 const ScreenVerifierContext = createContext<
-  ScreenVerifierValueType | undefined
+  ScreenVerifierValueTypes | undefined
 >(undefined);
 
 function ScreenVerifierProvider({ children }: ScreenVerifierProviderProps) {
@@ -44,7 +44,7 @@ function ScreenVerifierProvider({ children }: ScreenVerifierProviderProps) {
     return () => window.removeEventListener("resize", ScreenVerifier);
   }, []);
 
-  const value: ScreenVerifierValueType = { screenType, screenSize };
+  const value: ScreenVerifierValueTypes = { screenType, screenSize };
 
   return (
     <ScreenVerifierContext.Provider value={value}>

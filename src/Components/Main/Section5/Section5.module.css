@@ -1,6 +1,8 @@
 /* MOBILE */
 @media only screen and (max-width: 480px) {
-  .Section3 {
+  .Section5 {
+    height: 45svh;
+
     display: flex;
     justify-content: center;
   }

@@ -1,0 +1,23 @@
+[
+  {
+    "cardType": "information",
+    "imgSrc": "/Section5/Money.svg",
+    "imgAlt": "Imagem de notas de dinheiro, representando o controle sobre o dinheiro",
+    "imgWidth": 80,
+    "text": "Aprenda a economizar, planejar e tomar decisões financeiras melhores."
+  },
+  {
+    "cardType": "information",
+    "imgSrc": "/Section5/Evolution.svg",
+    "imgAlt": "Imagem de um raio, simbolizando a evolução",
+    "imgWidth": 80,
+    "text": "Ganhe XP, complete missões e desenvolva hábitos financeiros inteligentes."
+  },
+  {
+    "cardType": "information",
+    "imgSrc": "/Section5/Playing.svg",
+    "imgAlt": "Imagem de um controle de video-game, representando a experiência do aplicativo, que é jogando.",
+    "imgWidth": 80,
+    "text": "Transforme o aprendizado financeiro em uma experiência divertida e interativa."
+  }
+]

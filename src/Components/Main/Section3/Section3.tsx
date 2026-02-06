@@ -1,27 +1,14 @@
+import { forwardRef } from "react";
 import CardSlider, { type CardTypes } from "../../CardSlider/CardSlider";
-
-import useGetUsersInfo from "./Hooks/useGetUsersInfo";
 
 import Styles from "./Section3.module.css";
 
-export default function Section3() {
-  const { usersWithImageArray } = useGetUsersInfo();
+import Section3Data from "./Section3Data.json";
 
-  const Section3Data: CardTypes[] = usersWithImageArray.map((user) => {
-    return {
-      cardType: "people",
-      imgWidth: 100,
-      socialMedia: user?.linkedin,
-      stack: user?.stack,
-      imgSrc: user?.avatar_url,
-      imgAlt: user?.name,
-      text: user?.name,
-    };
-  });
+const Section3 = forwardRef<HTMLDivElement>((_, ref) => (
+  <section ref={ref} className={Styles.Section3}>
+    <CardSlider cardsArray={Section3Data as CardTypes[]} />
+  </section>
+));
 
-  return (
-    <section className={Styles.Section3}>
-      <CardSlider cardsArray={Section3Data} />
-    </section>
-  );
-}
+export default Section3;

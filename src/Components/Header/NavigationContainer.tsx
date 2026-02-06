@@ -9,7 +9,7 @@ const { contato, projeto, sobreNos, time } = TabBarImages;
 export default function NavigationContainer() {
   return (
     <nav className={Styles.NavigationContainer}>
-      <NavigationButton imgSrc={projeto} text="Projeto" top={700} />
+      <NavigationButton imgSrc={projeto} text="Projeto" top={660} />
       <NavigationButton imgSrc={sobreNos} text="Sobre nós" top={1140} />
       <NavigationButton imgSrc={time} text="Equipe" top={1495} />
       <NavigationButton imgSrc={contato} text="Contato" top={2100} />

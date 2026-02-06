@@ -1,7 +1,8 @@
 @media only screen and (max-width: 480px) {
   .CardSlider {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    gap: 15px;
 
     button {
       font-size: 30px;
@@ -11,5 +12,42 @@
     width: 256px;
 
     margin: auto;
+  }
+  .Button {
+    width: 30px;
+    height: 30px;
+
+    mix-blend-mode: darken;
+
+    margin-block: auto;
+    background: url("./ButtonImage.png") 100% 100% / 100% 100% no-repeat;
+
+    p {
+      font-size: 0px;
+    }
+  }
+
+  .Next {
+    rotate: 180deg;
+  }
+  .NextAnimation {
+    translate: 0 0;
+
+    animation: NextAnimation linear infinite 1s;
+  }
+}
+
+@keyframes NextAnimation {
+  0%,
+  15% {
+    translate: 0 0;
+  }
+  50% {
+    translate: -7px 0;
+  }
+
+  85%,
+  100% {
+    translate: 0 0;
   }
 }

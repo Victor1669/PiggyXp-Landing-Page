@@ -13,8 +13,8 @@
   }
 
   .PhoneImage {
-    width: 400px;
-    margin: 140px 0 80px;
+    width: 95svw;
+    margin: 130px 0 70px;
   }
 
   .MenuButton {
@@ -42,5 +42,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  @media only screen and (max-height: 661px) {
+    .PhoneImage {
+      margin: 130px 0 70px;
+    }
   }
 }

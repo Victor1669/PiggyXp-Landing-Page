@@ -1,9 +1,10 @@
 /* MOBILE */
 @media only screen and (max-width: 480px) {
   .Section4 {
-    height: 50svh;
+    height: 48svh;
 
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 }

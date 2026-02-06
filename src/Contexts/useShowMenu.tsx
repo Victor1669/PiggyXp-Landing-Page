@@ -4,19 +4,19 @@ interface ShowMenuProviderProps {
   children: React.ReactNode;
 }
 
-type ShowMenuProviderValue = {
+type ShowMenuValueTypes = {
   showMenu: boolean;
   setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const ShowMenuContext = createContext<ShowMenuProviderValue | undefined>(
+const ShowMenuContext = createContext<ShowMenuValueTypes | undefined>(
   undefined,
 );
 
 function ShowMenuProvider({ children }: ShowMenuProviderProps) {
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
-  const value: ShowMenuProviderValue = { showMenu, setShowMenu };
+  const value: ShowMenuValueTypes = { showMenu, setShowMenu };
   return (
     <ShowMenuContext.Provider value={value}>
       {children}

@@ -1,6 +1,6 @@
 import Styles from "../Section2.module.css";
 
-import BrowserSearch from "./assets/BrowserSearch.png";
+import BrowserSearch from "./BrowserSearch.png";
 
 interface BrowserSearchContainerProps {
   ref: React.RefObject<null>;

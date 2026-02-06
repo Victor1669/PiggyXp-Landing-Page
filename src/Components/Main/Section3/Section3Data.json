@@ -1,32 +1,16 @@
 [
   {
-    "name": "Pietro Santos Miranda",
-    "username": "pietros133",
-    "linkedin": "https://www.linkedin.com/in/pietro-miranda-09472b341/",
-    "stack": "Back-End | Designer"
+    "imgWidth": 60,
+    "cardType": "information",
+    "imgSrc": "/Section3/Mission.svg",
+    "imgAlt": "Ícone de um alvo com um dardo, simbolizando uma missão",
+    "text": "Nossa missão é desenvolver softwares sólidos e confiáveis, atuando como parceiros estratégicos dos nossos clientes para entregar soluções que gerem valor real."
   },
   {
-    "name": "Vinicius Xavier",
-    "username": "ViniciusXavier-29",
-    "linkedin": "https://www.linkedin.com/in/vinicius-xavier-965318254/",
-    "stack": "Back-End"
-  },
-  {
-    "name": "Victor Pereira",
-    "username": "ELVICTOR1",
-    "linkedin": "https://www.linkedin.com/in/victor-pereira-2947a1254/",
-    "stack": "Front-End"
-  },
-  {
-    "name": "Victor Fernandes",
-    "username": "Victor1669",
-    "linkedin": "https://www.linkedin.com/in/victorfernandes1669/",
-    "stack": "Front-End"
-  },
-  {
-    "name": "Ryan",
-    "username": "eyanprogh",
-    "linkedin": "https://www.linkedin.com/in/ryan-s%C3%A9rgio-453a80386/",
-    "stack": "Back-End"
+    "imgWidth": 60,
+    "cardType": "information",
+    "imgSrc": "/Section3/Vision.svg",
+    "imgAlt": "Ícone de um foguete, simbolizando uma visão",
+    "text": "Nossa visão é evoluir além do presente, transformando ideias em soluções e desafios em oportunidades, sempre olhando para o futuro."
   }
 ]

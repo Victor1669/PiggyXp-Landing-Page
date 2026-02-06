@@ -1,18 +1,14 @@
-//#region Importações
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 
 import { useScreenVerifier } from "../../../../Contexts/useScreenVerifier";
 
-import Styles from "./Part1.module.css";
-
 import { Card } from "../../../Card/Card";
 import BrowserSearchContainer from "./BrowserSearchContainer";
 
-import PiggyXpLogo from "./assets/PiggyXp-Logo.png";
-//#endregion
+import PiggyXpLogo from "../../../../assets/PiggyXp-Logo.png";
 
-export default function Section2Part1() {
+export default function Section2Content() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const { screenType } = useScreenVerifier();
@@ -27,6 +23,7 @@ export default function Section2Part1() {
     : "PiggyXP é um app da VSS que ajuda jovens e adultos a cuidarem do dinheiro de forma simples. Usando gamificação, o aprendizado financeiro acontece por meio de missões, desafios e XP, incentivando hábitos financeiros saudáveis de maneira prática e motivador.";
 
   const paragraph = isLoading ? "Carregando..." : text.slice(0, textIndex);
+
   useEffect(() => {
     if (!isInView || isLoading) return;
 
@@ -57,7 +54,7 @@ export default function Section2Part1() {
 
   if (!isDesktop) {
     return (
-      <div className={Styles.Part1}>
+      <div>
         <Card
           ref={ref}
           enableAnimation={true}

@@ -20,6 +20,9 @@ interface CardSliderProps {
 
 export default function CardSlider({ cardsArray }: CardSliderProps) {
   const [cardIndex, setCardIndex] = useState<number>(0);
+  const [toggleNextAnimation, setToggleNextAnimation] = useState<boolean>(true);
+  const [togglePreviousAnimation, setTogglePreviousAnimation] =
+    useState<boolean>(true);
 
   const isMinusButtonActive = cardIndex > 0;
   const isAddButtonActive = cardIndex < cardsArray.length - 1;
@@ -33,23 +36,29 @@ export default function CardSlider({ cardsArray }: CardSliderProps) {
 
   return (
     <div className={Styles.CardSlider}>
-      <button
+      <Button
+        className={`${Styles.Previous} ${togglePreviousAnimation ? Styles.PreviousAnimation : undefined}`}
         disabled={!isMinusButtonActive}
+        onClick={() => {
+          handleChangeCardIndex("minus");
+          setTogglePreviousAnimation(false);
+        }}
+        text="Card anterior"
         style={{ opacity: isMinusButtonActive ? 1 : 0 }}
-        onClick={() => handleChangeCardIndex("minus")}
-      >
-        {"<"}
-      </button>
+      />
 
       <CardContainer cardIndex={cardIndex} cardsArray={cardsArray} />
 
-      <button
+      <Button
+        className={`${Styles.Next} ${toggleNextAnimation ? Styles.NextAnimation : undefined}`}
         disabled={!isAddButtonActive}
+        onClick={() => {
+          handleChangeCardIndex("add");
+          setToggleNextAnimation(false);
+        }}
+        text="Próximo"
         style={{ opacity: isAddButtonActive ? 1 : 0 }}
-        onClick={() => handleChangeCardIndex("add")}
-      >
-        {">"}
-      </button>
+      />
     </div>
   );
 }
@@ -74,5 +83,26 @@ function CardContainer({ cardIndex, cardsArray }: CardContainerProps) {
         {card?.text}
       </Card>
     </div>
+  );
+}
+
+interface ButtonProps {
+  className: string;
+  disabled: boolean;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  text: string;
+  style?: React.CSSProperties;
+}
+
+function Button({ className, disabled, onClick, text, style }: ButtonProps) {
+  return (
+    <button
+      disabled={disabled}
+      className={`${Styles.Button} ${className}`}
+      style={style}
+      onClick={onClick}
+    >
+      <p>{text}</p>
+    </button>
   );
 }
