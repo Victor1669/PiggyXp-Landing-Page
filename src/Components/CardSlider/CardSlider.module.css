@@ -1,17 +1,12 @@
-@media only screen and (max-width: 480px) {
+/* PADRÃO */
+@media only screen and (min-width: 0px) {
   .CardSlider {
     display: flex;
     justify-content: center;
     gap: 15px;
-
-    button {
-      font-size: 30px;
-    }
   }
   .CardContainer {
     width: 256px;
-
-    margin: auto;
   }
   .Button {
     width: 30px;
@@ -23,7 +18,12 @@
     background: url("./ButtonImage.png") 100% 100% / 100% 100% no-repeat;
 
     p {
-      font-size: 0px;
+      width: 1px;
+      height: 1px;
+      font-size: 1px;
+      white-space: nowrap;
+      position: absolute;
+      left: 10px;
     }
   }
 
@@ -34,6 +34,20 @@
     translate: 0 0;
 
     animation: NextAnimation linear infinite 1s;
+  }
+}
+
+/* MOBILE */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .CardContainer {
+    margin: auto;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .CardContainer {
+    margin-inline: 25px;
   }
 }
 

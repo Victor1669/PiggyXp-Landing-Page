@@ -1,0 +1,33 @@
+/* PADRÃO */
+@media only screen and (min-width: 0px) {
+  .Main {
+    display: flex;
+    flex-direction: column;
+  }
+  .BackgroundImage {
+    width: 100vw;
+    height: 800px;
+
+    position: absolute;
+    z-index: -999;
+    translate: 0px 150svh;
+  }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 480px) {
+  .Main {
+    gap: 30px;
+  }
+  .BackgroundImage {
+    background: url("../assets/Rectangle-M.png") -5svw 0 / 105svw 480px
+      no-repeat;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .BackgroundImage {
+    background: none;
+  }
+}

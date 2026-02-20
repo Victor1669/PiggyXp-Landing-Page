@@ -15,6 +15,5 @@ createRoot(document.getElementById("root")!).render(
         <App />
       </ShowMenuProvider>
     </ScreenVerifierProvider>
-    ,
   </ElementNavigationProvider>,
 );

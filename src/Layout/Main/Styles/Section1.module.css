@@ -1,0 +1,103 @@
+/* PADRÃO */
+@media only screen and (min-width: 0px) {
+  .Section1 {
+    height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+  }
+  .PhoneImageContainer {
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 60svw;
+    }
+  }
+  .MenuButton {
+    width: 70px;
+    mix-blend-mode: difference;
+
+    position: fixed;
+    inset: 0 auto auto 0;
+
+    margin: 20px 15px;
+    padding: 20px;
+  }
+  .DownloadButton {
+    width: 80%;
+    height: 56px;
+    background-color: #3873ca;
+
+    font-size: 1.25rem;
+    color: white;
+
+    border-radius: 20px;
+    box-shadow: #2d548d 0 4px 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 80px;
+  }
+
+  @media only screen and (max-height: 661px) {
+    .PhoneImage {
+      margin: 130px 0 70px;
+    }
+  }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 480px) {
+  .Section1 {
+    background-image:
+      url("../assets/section1/Rectangle-M-1.svg"),
+      url("../assets/section1/Rectangle-M-2.svg");
+
+    background-repeat: no-repeat;
+    background-position:
+      0 -40px,
+      -50px 560px;
+
+    background-size: 120vw;
+  }
+  .PhoneImageContainer {
+    width: 95svw;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .Section1 {
+    padding-top: 100px;
+
+    background:
+      url("../assets/section1/Rectangle-M-1.svg") 0 -250px / 120vw no-repeat,
+      none;
+  }
+  .PhoneImageContainer {
+    --phoneImgSize: 360px;
+    width: 90svw;
+    height: var(--phoneImgSize);
+    position: relative;
+
+    h2 {
+      width: calc(100% - var(--phoneImgSize));
+      font-size: calc(100svw / 22);
+    }
+    img {
+      position: absolute;
+      width: var(--phoneImgSize);
+      right: 0;
+    }
+  }
+  .DownloadButton {
+    justify-self: flex-end;
+  }
+}

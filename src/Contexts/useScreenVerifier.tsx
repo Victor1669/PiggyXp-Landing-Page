@@ -31,9 +31,9 @@ function ScreenVerifierProvider({ children }: ScreenVerifierProviderProps) {
 
     setScreenSize(screenWidth);
 
-    if (screenWidth < 480) {
+    if (screenWidth < 481) {
       setScreenType("mobile");
-    } else if (screenWidth < 768) {
+    } else if (screenWidth >= 481 && screenWidth <= 768) {
       setScreenType("tablet");
     } else setScreenType("desktop");
   }

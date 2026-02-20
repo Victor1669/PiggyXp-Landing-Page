@@ -11,6 +11,20 @@
   appearance: none;
 }
 
+html {
+  font-size: 16px;
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  html {
+    font-size: 20px;
+  }
+}
+
 body {
   background-color: var(--primaryBackgroundColor);
 
@@ -24,4 +38,8 @@ button,
 a,
 h1 {
   all: unset;
+}
+
+section {
+  padding-top: 40px;
 }

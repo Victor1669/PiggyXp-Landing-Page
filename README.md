@@ -4,7 +4,7 @@
 
 `É uma aplicação nova criada pela VSS para tornar o ensino de educação financeira mais divertida, dinâmica e acessível usando o método de gamificação, onde transformamos o ensino em um jogo, com perguntas e fases.`
 
-## O que esse reposiŕio é?
+## O que esse repositório é?
 
 `Essa é uma página para que novos usuários possam ter acesso aos APKs da nossa aplicação, conhecendo a nossa aplicação, objetivos, integrantes e contatos`
 

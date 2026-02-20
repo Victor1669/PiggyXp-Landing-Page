@@ -1,0 +1,20 @@
+/* PADRÃO */
+@media only screen and (min-width: 0px) {
+  .Section5 {
+    height: 45svh;
+
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 480px) {
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .Section5 {
+    background: url("../assets/section5/Rectangle-D.png") 0px -15px / 100svw
+      100% no-repeat;
+  }
+}

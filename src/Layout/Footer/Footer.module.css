@@ -1,0 +1,52 @@
+/* PADRÃO */
+@media only screen and (min-width: 0px) {
+  .Content {
+    height: inherit;
+
+    scale: 0.9;
+
+    display: grid;
+    place-content: end center;
+    gap: 15px;
+
+    span {
+      display: grid;
+      place-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+    }
+
+    .RepoLink {
+      font-size: 1rem;
+    }
+
+    small {
+      width: 60%;
+      text-align: center;
+      margin: auto;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 480px) {
+  .Footer {
+    --footerHeight: 360px;
+
+    height: var(--footerHeight);
+
+    background: url("./Rectangle-M-2.svg") -150px bottom / 150svw
+      var(--footerHeight) no-repeat;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .Footer {
+    height: var(--footerHeight);
+    margin-top: 30px;
+
+    background: none;
+  }
+}
