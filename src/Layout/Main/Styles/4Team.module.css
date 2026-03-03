@@ -1,0 +1,29 @@
+/* PADRÃO */
+.Section4 {
+  height: 48svh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 480px) {
+}
+
+/* TABLET */
+@media only screen and (min-width: 481px) and (max-width: 768px) and (min-height: 600px) {
+  .Section4 {
+    background: url("../assets/Team/Rectangle-D.png") 0 0 / 100svw 100%
+      no-repeat;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 769px) and (min-height: 600px) {
+  .Section4 {
+    height: 60svh;
+    background: url("../assets/Team/Rectangle-D.png") 0 1px / 100svw 100%
+      no-repeat;
+  }
+}

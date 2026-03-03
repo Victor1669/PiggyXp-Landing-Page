@@ -9,10 +9,10 @@ const { contato, projeto, sobreNos, time } = TabBarImages;
 export default function NavigationContainer() {
   return (
     <nav className={Styles.NavigationContainer}>
-      <NavigationButton imgSrc={projeto} text="Projeto" top={660} />
-      <NavigationButton imgSrc={sobreNos} text="Sobre nós" top={1140} />
-      <NavigationButton imgSrc={time} text="Equipe" top={1495} />
-      <NavigationButton imgSrc={contato} text="Contato" top={2100} />
+      <NavigationButton imgSrc={projeto} text="Projeto" id="projeto" />
+      <NavigationButton imgSrc={sobreNos} text="Sobre nós" id="sobreNos" />
+      <NavigationButton imgSrc={time} text="Equipe" id="equipe" />
+      <NavigationButton imgSrc={contato} text="Contato" id="contatos" />
     </nav>
   );
 }
@@ -20,25 +20,20 @@ export default function NavigationContainer() {
 interface NavigationButtonProps {
   text: string;
   imgSrc: string;
-  top: number;
+  id: string;
 }
 
-function NavigationButton({ text, imgSrc, top }: NavigationButtonProps) {
+function NavigationButton({ text, imgSrc, id }: NavigationButtonProps) {
   const { setShowMenu } = useShowMenu();
+
+  function handleNavigation() {
+    setShowMenu(false);
+    window.location.href = `#${id}`;
+  }
   return (
-    <div className={Styles.NavigationButton}>
+    <button className={Styles.NavigationButton} onClick={handleNavigation}>
       <img width={25} src={imgSrc} alt={text} />
-      <button
-        onClick={() => {
-          setShowMenu(false);
-          scrollTo({
-            behavior: "smooth",
-            top,
-          });
-        }}
-      >
-        <p>{text}</p>
-      </button>
-    </div>
+      <p>{text}</p>
+    </button>
   );
 }

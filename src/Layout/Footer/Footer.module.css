@@ -42,7 +42,7 @@
 }
 
 /* TABLET */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (min-width: 481px) and (max-width: 768px) and (min-height: 600px) {
   .Footer {
     height: var(--footerHeight);
     margin-top: 30px;

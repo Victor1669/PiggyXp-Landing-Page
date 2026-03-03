@@ -1,0 +1,70 @@
+/* PADRÃO */
+.Section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  scroll-margin-top: 20px;
+}
+
+.BrowserSearchContainer {
+  display: none;
+}
+
+/* TABLET */
+@media only screen and (min-width: 481px) and (max-width: 768px) and (min-height: 600px) {
+  .Section2 {
+    background: url("../assets/section2/Rectangle-D-1.png") 0 0 / 100svw 100%
+      no-repeat;
+
+    padding-block: 100px 40px;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 769px) and (min-height: 600px) {
+  .Section2 {
+    background: url("../assets/section2/Rectangle-D-1.png") 0 0 / 100svw 100%
+      no-repeat;
+
+    padding-block: 60px;
+    scroll-margin-top: 100px;
+  }
+  .BrowserSearchContainer {
+    display: block;
+    --imgWidth: 55dvw;
+    width: var(--imgWidth);
+    position: relative;
+    margin-block: 30px;
+
+    img {
+      width: inherit;
+    }
+  }
+  .TextContainer {
+    height: 50%;
+    width: 55%;
+
+    position: absolute;
+    top: 33%;
+    left: 4%;
+
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      background-color: gray;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: black;
+    }
+
+    p {
+      text-indent: 2rem;
+      font-size: 1.25rem;
+      line-height: 1.8rem;
+      margin-right: 25px;
+      text-align: justify;
+      padding: 15px;
+    }
+  }
+}

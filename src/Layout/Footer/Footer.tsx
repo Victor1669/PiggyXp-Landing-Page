@@ -5,7 +5,7 @@ import GitHub from "./GitHub.svg";
 
 export default function Footer() {
   return (
-    <footer className={Styles.Footer}>
+    <footer className={Styles.Footer} id="contatos">
       <div className={Styles.Content}>
         <LinkContainer1 />
         <LinkContainer2 />

@@ -1,8 +1,7 @@
 import { useState } from "react";
-
 import { Card } from "../Card/Card";
-
 import Styles from "./CardSlider.module.css";
+import { useScreenVerifier } from "@Contexts/useScreenVerifier";
 
 export type CardTypes = {
   cardType: "information" | "people";
@@ -18,91 +17,62 @@ interface CardSliderProps {
   cardsArray: CardTypes[];
 }
 
+const CARDS_PER_SCREEN = {
+  mobile: 1,
+  tablet: 2,
+  desktop: 4,
+} as const;
+
 export default function CardSlider({ cardsArray }: CardSliderProps) {
-  const [cardIndex, setCardIndex] = useState<number>(0);
-  const [toggleNextAnimation, setToggleNextAnimation] = useState<boolean>(true);
-  const [togglePreviousAnimation, setTogglePreviousAnimation] =
-    useState<boolean>(true);
+  const [cardIndex, setCardIndex] = useState(0);
+  const { screenType } = useScreenVerifier();
 
-  const isMinusButtonActive = cardIndex > 0;
-  const isAddButtonActive = cardIndex < cardsArray.length - 1;
+  const visibleCount = CARDS_PER_SCREEN[screenType];
+  const canGoPrev = cardIndex > 0;
+  const canGoNext = cardIndex + visibleCount < cardsArray.length;
 
-  function handleChangeCardIndex(type: "minus" | "add") {
+  function navigate(direction: "prev" | "next") {
     document.startViewTransition(() => {
-      if (type === "minus") setCardIndex((prev) => prev - 1);
-      if (type === "add") setCardIndex((prev) => prev + 1);
+      setCardIndex((prev) => prev + (direction === "next" ? 1 : -1));
     });
   }
 
+  const visibleCards = cardsArray.slice(cardIndex, cardIndex + visibleCount);
+
   return (
     <div className={Styles.CardSlider}>
-      <Button
-        className={`${Styles.Previous} ${togglePreviousAnimation ? Styles.PreviousAnimation : undefined}`}
-        disabled={!isMinusButtonActive}
-        onClick={() => {
-          handleChangeCardIndex("minus");
-          setTogglePreviousAnimation(false);
-        }}
-        text="Card anterior"
-        style={{ opacity: isMinusButtonActive ? 1 : 0 }}
-      />
-
-      <CardContainer cardIndex={cardIndex} cardsArray={cardsArray} />
-
-      <Button
-        className={`${Styles.Next} ${toggleNextAnimation ? Styles.NextAnimation : undefined}`}
-        disabled={!isAddButtonActive}
-        onClick={() => {
-          handleChangeCardIndex("add");
-          setToggleNextAnimation(false);
-        }}
-        text="Próximo"
-        style={{ opacity: isAddButtonActive ? 1 : 0 }}
-      />
-    </div>
-  );
-}
-
-interface CardContainerProps {
-  cardIndex: number;
-  cardsArray: CardTypes[];
-}
-
-function CardContainer({ cardIndex, cardsArray }: CardContainerProps) {
-  const card = cardsArray[cardIndex];
-
-  return (
-    <div className={Styles.CardContainer}>
-      <Card
-        cardType={card?.cardType}
-        peopleName={card?.text}
-        peopleSocialMedia={card?.socialMedia}
-        peopleStack={card?.stack}
-        img={{ width: card?.imgWidth, src: card?.imgSrc, alt: card?.imgAlt }}
+      <button
+        className={`${Styles.Button} ${Styles.Previous}`}
+        disabled={!canGoPrev}
+        onClick={() => navigate("prev")}
+        style={{ opacity: canGoPrev ? 1 : 0 }}
       >
-        {card?.text}
-      </Card>
+        <p>Card anterior</p>
+      </button>
+
+      <div className={Styles.CardContainer}>
+        {visibleCards.map((card) => (
+          <Card
+            key={card.imgSrc}
+            cardType={card.cardType}
+            peopleName={card.text}
+            peopleSocialMedia={card.socialMedia}
+            peopleStack={card.stack}
+            img={{ width: card.imgWidth, src: card.imgSrc, alt: card.imgAlt }}
+          >
+            {card.text}
+          </Card>
+        ))}
+      </div>
+
+      <button
+        className={`${Styles.Button} ${Styles.Next}`}
+        disabled={!canGoNext}
+        onClick={() => navigate("next")}
+        style={{ opacity: canGoNext ? 1 : 0 }}
+      >
+        <p>Próximo</p>
+      </button>
     </div>
-  );
-}
-
-interface ButtonProps {
-  className: string;
-  disabled: boolean;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
-  text: string;
-  style?: React.CSSProperties;
-}
-
-function Button({ className, disabled, onClick, text, style }: ButtonProps) {
-  return (
-    <button
-      disabled={disabled}
-      className={`${Styles.Button} ${className}`}
-      style={style}
-      onClick={onClick}
-    >
-      <p>{text}</p>
-    </button>
   );
 }

@@ -1,0 +1,142 @@
+/* PADRÃO */
+.DownloadApp {
+  height: 100svh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+
+  background-image:
+    url("../assets/DownloadApp/Rectangle-M-1.svg"),
+    url("../assets/DownloadApp/Rectangle-M-2.svg/");
+
+  background-repeat: no-repeat;
+  background-position:
+    0 -40px,
+    -50px 560px;
+
+  background-size: 120vw;
+}
+.PhoneImageContainer {
+  width: 95svw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+
+  h2 {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background-color: #2d548d;
+
+    color: #fff;
+  }
+}
+.PhoneImage {
+  width: 80dvw;
+  position: absolute;
+  right: 5dvw;
+  margin-top: 25svh;
+}
+.MenuButton {
+  width: 70px;
+  mix-blend-mode: difference;
+
+  position: fixed;
+  inset: 0 auto auto 0;
+
+  margin: 20px 15px;
+  padding: 20px;
+}
+.DownloadButton {
+  width: 80%;
+  height: 56px;
+  background-color: #3873ca;
+
+  font-size: 1.25rem;
+  color: white;
+  font-weight: bold;
+
+  border-radius: 20px;
+  box-shadow: #2d548d 0 4px 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 40px;
+
+  cursor: pointer;
+}
+
+/* TABLET */
+@media only screen and (min-width: 481px) and (max-width: 768px) and (min-height: 600px) {
+  .DownloadApp {
+    padding-top: 100px;
+
+    background:
+      url("../assets/DownloadApp/Rectangle-M-1.svg") 0 -250px / 120vw no-repeat,
+      none;
+  }
+  .PhoneImageContainer {
+    --phoneImgSize: 250px;
+    width: 90svw;
+    height: var(--phoneImgSize);
+    position: relative;
+
+    h2 {
+      width: 100%;
+      font-size: calc(100svw / 22);
+    }
+  }
+  .PhoneImage {
+    width: var(--phoneImgSize);
+    position: initial;
+    margin-top: 8svw;
+  }
+  .DownloadButton {
+    justify-self: flex-end;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 769px) and (min-height: 600px) {
+  .DownloadApp {
+    padding-top: 100px;
+
+    background:
+      url("../assets/DownloadApp/Rectangle-M-1.svg") 0 -45dvw / 120vw no-repeat,
+      none;
+  }
+  .PhoneImageContainer {
+    --phoneImgSize: 30dvw;
+    width: 90svw;
+    height: var(--phoneImgSize);
+    position: relative;
+    flex-direction: row;
+
+    h2 {
+      width: 60dvw;
+      font-size: calc(100svw / 22);
+    }
+  }
+  .PhoneImage {
+    position: absolute;
+    width: var(--phoneImgSize);
+    right: 0dvw;
+    margin-top: 10dvw;
+    z-index: 0;
+  }
+  .DownloadButton {
+    width: 400px;
+    padding: 10px;
+    justify-self: flex-end;
+    font-size: 2rem;
+  }
+  .MenuButton {
+    display: none;
+  }
+}

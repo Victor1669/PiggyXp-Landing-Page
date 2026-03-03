@@ -19,6 +19,7 @@
     /* Path mapping */
     "baseUrl": "./src",
     "paths": {
+      "@Hooks/*": ["Hooks/*"],
       "@Components/*": ["Components/*"],
       "@Contexts/*": ["Contexts/*"],
       "@MainAssets/*": ["Layout/Main/assets/*"]

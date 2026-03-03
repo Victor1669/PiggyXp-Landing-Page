@@ -1,53 +1,65 @@
 /* PADRÃO */
-@media only screen and (min-width: 0px) {
-  .CardSlider {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-  }
-  .CardContainer {
-    width: 256px;
-  }
-  .Button {
-    width: 30px;
-    height: 30px;
+.CardSlider {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.CardContainer {
+  width: 256px;
+  margin: auto;
+}
+.Button {
+  width: 30px;
+  height: 30px;
 
-    mix-blend-mode: darken;
+  mix-blend-mode: darken;
+  cursor: pointer;
 
-    margin-block: auto;
-    background: url("./ButtonImage.png") 100% 100% / 100% 100% no-repeat;
+  margin-block: auto;
+  background: url("./ButtonImage.png") 100% 100% / 100% 100% no-repeat;
 
-    p {
-      width: 1px;
-      height: 1px;
-      font-size: 1px;
-      white-space: nowrap;
-      position: absolute;
-      left: 10px;
-    }
-  }
-
-  .Next {
-    rotate: 180deg;
-  }
-  .NextAnimation {
-    translate: 0 0;
-
-    animation: NextAnimation linear infinite 1s;
+  p {
+    width: 1px;
+    height: 1px;
+    font-size: 1px;
+    white-space: nowrap;
+    position: absolute;
+    left: 10px;
   }
 }
 
-/* MOBILE */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  .CardContainer {
-    margin: auto;
-  }
+.Next {
+  rotate: 180deg;
+}
+.NextAnimation {
+  translate: 0 0;
+
+  animation: NextAnimation linear infinite 1s;
 }
 
 /* TABLET */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (min-width: 481px) and (max-width: 768px) and (min-height: 600px) {
   .CardContainer {
     margin-inline: 25px;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 769px) and (min-height: 600px) {
+  .CardSlider {
+    gap: 25px;
+    scale: 0.8;
+  }
+  .CardContainer {
+    width: max-content;
+    display: flex;
+    gap: 30px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .CardSlider {
+    scale: 1;
   }
 }
 

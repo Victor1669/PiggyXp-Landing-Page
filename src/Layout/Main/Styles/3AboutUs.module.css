@@ -1,0 +1,20 @@
+/* PADRÃO */
+.AboutUs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* TABLET */
+@media only screen and (min-width: 481px) and (max-width: 768px) and (min-height: 600px) {
+  .AboutUs {
+    margin-bottom: 20px;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 769px) and (min-height: 600px) {
+  .AboutUs {
+    margin-block: 40px;
+  }
+}
