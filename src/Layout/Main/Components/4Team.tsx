@@ -11,13 +11,16 @@ export default function Team() {
     return {
       cardType: "people",
       imgWidth: 100,
-      socialMedia: user?.linkedin,
+      linkedin: user?.linkedin,
+      github: user?.github,
       stack: user?.stack,
       imgSrc: user?.avatar_url,
       imgAlt: user?.name,
       text: user?.name,
     };
   });
+
+  console.log(Section4Data);
 
   return (
     <section id="equipe" className={Styles.Section4}>

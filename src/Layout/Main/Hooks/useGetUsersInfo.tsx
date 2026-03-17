@@ -6,6 +6,7 @@ type UserWithImageType = {
   name: string;
   avatar_url: string;
   linkedin: string;
+  github: string;
   stack: string;
 };
 
@@ -29,9 +30,10 @@ export default function useGetUsersInfo() {
           const name = user.name;
           const avatar_url = userImagesArray[i].avatar_url;
           const linkedin = UsersArray[i].linkedin;
+          const github = UsersArray[i].github;
           const stack = UsersArray[i].stack;
 
-          return { name, avatar_url, linkedin, stack };
+          return { name, avatar_url, linkedin, github, stack };
         },
       );
 

@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useScreenVerifier } from "@Contexts/useScreenVerifier";
 import { Card } from "../Card/Card";
 import Styles from "./CardSlider.module.css";
-import { useScreenVerifier } from "@Contexts/useScreenVerifier";
 
 export type CardTypes = {
   cardType: "information" | "people";
@@ -9,7 +9,8 @@ export type CardTypes = {
   imgSrc: string;
   imgAlt: string;
   text: string;
-  socialMedia?: string;
+  linkedin?: string;
+  github?: string;
   stack?: string;
 };
 
@@ -19,9 +20,9 @@ interface CardSliderProps {
 
 const CARDS_PER_SCREEN = {
   mobile: 1,
-  tablet: 2,
+  tablet: 1,
   desktop: 4,
-} as const;
+};
 
 export default function CardSlider({ cardsArray }: CardSliderProps) {
   const [cardIndex, setCardIndex] = useState(0);
@@ -30,6 +31,10 @@ export default function CardSlider({ cardsArray }: CardSliderProps) {
   const visibleCount = CARDS_PER_SCREEN[screenType];
   const canGoPrev = cardIndex > 0;
   const canGoNext = cardIndex + visibleCount < cardsArray.length;
+
+  useEffect(() => {
+    setCardIndex(0);
+  }, [screenType]);
 
   function navigate(direction: "prev" | "next") {
     document.startViewTransition(() => {
@@ -56,7 +61,8 @@ export default function CardSlider({ cardsArray }: CardSliderProps) {
             key={card.imgSrc}
             cardType={card.cardType}
             peopleName={card.text}
-            peopleSocialMedia={card.socialMedia}
+            peopleLinkedin={card.linkedin}
+            peopleGitHub={card.github}
             peopleStack={card.stack}
             img={{ width: card.imgWidth, src: card.imgSrc, alt: card.imgAlt }}
           >

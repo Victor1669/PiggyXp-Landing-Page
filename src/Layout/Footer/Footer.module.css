@@ -1,31 +1,40 @@
 /* PADRÃO */
-@media only screen and (min-width: 0px) {
-  .Content {
-    height: inherit;
+.Content {
+  height: inherit;
 
-    scale: 0.9;
+  scale: 0.9;
 
+  display: grid;
+  place-content: end center;
+  gap: 15px;
+
+  span {
     display: grid;
-    place-content: end center;
+    place-items: center;
     gap: 15px;
+    font-size: 1.1rem;
+  }
 
-    span {
-      display: grid;
-      place-items: center;
-      gap: 10px;
-      font-size: 1.1rem;
-    }
+  small {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    font-size: 0.9rem;
+  }
+}
+.RepoLink {
+  font-size: 1rem;
+  cursor: pointer;
 
-    .RepoLink {
-      font-size: 1rem;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
-    small {
-      width: 60%;
-      text-align: center;
-      margin: auto;
-      font-size: 0.9rem;
-    }
+.EmailLink {
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
   }
 }
 

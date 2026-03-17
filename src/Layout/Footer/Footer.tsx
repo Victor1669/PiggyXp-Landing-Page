@@ -1,7 +1,7 @@
 import Styles from "./Footer.module.css";
 
 import Email from "../../assets/contato.png";
-import GitHub from "./GitHub.svg";
+import GitHub from "../../assets/GitHub.svg";
 
 export default function Footer() {
   return (
@@ -23,7 +23,9 @@ function LinkContainer1() {
         src={Email}
         alt="Imagem de uma carta representando um e-mail."
       />
-      <a href="mailto:piggyxp.oficial@gmail.com">piggyxp.oficial@gmail.com</a>
+      <a className={Styles.EmailLink} href="mailto:piggyxp.oficial@gmail.com">
+        piggyxp.oficial@gmail.com
+      </a>
     </span>
   );
 }

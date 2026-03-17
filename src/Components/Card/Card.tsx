@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Styles from "./Card.module.css";
 
 import Linkedin from "./Linkedin.svg";
+import GitHub from "../../assets/GitHub.svg";
 
 interface CardProps {
   cardType: "people" | "information";
@@ -16,7 +17,8 @@ interface CardProps {
 
   ref?: React.ForwardedRef<HTMLDivElement>;
   peopleName?: string;
-  peopleSocialMedia?: string;
+  peopleLinkedin?: string;
+  peopleGitHub?: string;
   peopleStack?: string;
   enableAnimation?: boolean;
   style?: React.CSSProperties;
@@ -29,7 +31,8 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
       children,
       img,
       peopleName,
-      peopleSocialMedia,
+      peopleLinkedin,
+      peopleGitHub,
       peopleStack,
       enableAnimation = false,
       style,
@@ -45,12 +48,20 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
             src={img.src}
             alt={img.alt}
           />
-          <p className={Styles.Name}>{children}</p>
+          <p className={Styles.Name}>{peopleName}</p>
           <p className={Styles.Stack}>{peopleStack}</p>
+          <span
+            className={Styles.GitHubLogo}
+            onClick={() => {
+              window.location.href = peopleGitHub + "#";
+            }}
+          >
+            <img src={GitHub} alt={`GitHub do ${peopleName}`} />
+          </span>
           <span
             className={Styles.LinkedInLogo}
             onClick={() => {
-              window.location.href = peopleSocialMedia ?? "#";
+              window.location.href = peopleLinkedin ?? "#";
             }}
           >
             <img src={Linkedin} alt={`LinkedIn do ${peopleName}`} />
