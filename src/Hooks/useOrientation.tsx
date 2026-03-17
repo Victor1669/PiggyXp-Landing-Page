@@ -1,0 +1,20 @@
+import { useState, useEffect } from "react";
+
+export function useOrientation() {
+  const [isLandscape, setIsLandscape] = useState(
+    window.matchMedia("(orientation: landscape)").matches,
+  );
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(orientation: landscape)");
+
+    function handler(e: MediaQueryListEvent) {
+      setIsLandscape(e.matches);
+    }
+    mediaQuery.addEventListener("change", handler);
+
+    return () => mediaQuery.removeEventListener("change", handler);
+  }, []);
+
+  return isLandscape ? "landscape" : "portrait";
+}

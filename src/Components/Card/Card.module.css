@@ -12,6 +12,7 @@
 
   gap: 15px;
 
+  scale: 1;
   transition: all 0.2s;
 
   &:hover {
@@ -74,5 +75,12 @@
 
   img {
     aspect-ratio: 10 / 10;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 769px) and (min-height: 600px) {
+  .Card {
+    height: 330px;
   }
 }

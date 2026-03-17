@@ -9,29 +9,23 @@
   box-sizing: border-box;
 
   appearance: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 html {
   font-size: 16px;
 }
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  html {
-    font-size: 18px;
-  }
-}
-@media only screen and (min-width: 769px) {
-  html {
-    font-size: 20px;
-  }
-}
 
 body {
   background-color: var(--primaryBackgroundColor);
+  max-width: 100dvw !important;
 
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
+
+  overflow-x: hidden;
 }
 
 button,
@@ -42,4 +36,23 @@ h1 {
 
 section {
   padding-top: 40px;
+
+  &:not(#equipe) {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 481px) and (max-width: 768px) and (min-height: 600px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 769px) and (min-height: 600px) {
+  html {
+    font-size: 20px;
+  }
 }

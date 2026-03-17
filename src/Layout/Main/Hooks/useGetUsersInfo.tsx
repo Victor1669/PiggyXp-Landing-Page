@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import UsersArray from "../data/Section4Data.json";
+import UsersArray from "../data/DevelopersData.json";
 
 type UserWithImageType = {
   name: string;
