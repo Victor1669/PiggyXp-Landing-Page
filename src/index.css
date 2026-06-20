@@ -36,12 +36,7 @@ h1 {
 }
 
 section {
-  padding-top: 40px;
-
-  &:not(#equipe) {
-    margin-top: 0;
-    margin-bottom: 40px;
-  }
+  padding-block: 30px;
 }
 
 /* TABLET */

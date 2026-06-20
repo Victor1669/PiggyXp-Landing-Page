@@ -1,0 +1,52 @@
+/* PADRÃO */
+.ExplicacaoProjeto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  scroll-margin-top: 20px;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 480px) {
+  .BrowserWrapper {
+    display: none;
+  }
+  .CardWrapper {
+    display: block;
+  }
+  .ExplicacaoProjeto {
+    padding-block: 40px;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 481px) and (max-width: 768px) and (min-height: 600px) {
+  .BrowserWrapper {
+    display: none;
+  }
+  .CardWrapper {
+    display: block;
+  }
+  .ExplicacaoProjeto {
+    background: url("./Rectangle-D-1.png") center / cover no-repeat;
+
+    padding-block: 50px;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 769px) and (min-height: 600px) {
+  .BrowserWrapper {
+    display: block;
+  }
+  .CardWrapper {
+    display: none;
+  }
+  .ExplicacaoProjeto {
+    background: url("./Rectangle-D-1.png") center / cover no-repeat;
+
+    scroll-margin-top: 100px;
+  }
+}

@@ -1,0 +1,29 @@
+/* PADRÃO */
+.SobreNos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Card {
+  img {
+    width: 150px;
+  }
+  p {
+    margin-top: 20px;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 481px) and (max-width: 768px) and (min-height: 600px) {
+  .SobreNos {
+    margin-bottom: 20px;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 769px) and (min-height: 600px) {
+  .SobreNos {
+    margin-block: 40px;
+  }
+}

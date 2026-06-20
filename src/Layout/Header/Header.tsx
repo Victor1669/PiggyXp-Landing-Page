@@ -1,19 +1,23 @@
-import { useShowMenu } from "../../Contexts/useShowMenu";
+import { useOutsideClick } from "@Hooks/useOutsideClick";
 
 import Styles from "./Header.module.css";
 
-import NavigationContainer from "./NavigationContainer";
+import NavigationContainer from "@UI/Header/NavigationContainer/NavigationContainer";
 
-import Logo from "./Logo";
+import Logo from "@UI/Header/Logo/Logo";
 
 export default function Header() {
-  const { showMenu } = useShowMenu();
+  function handleOutsideClick() {
+    document
+      .getElementsByTagName("header")[0]
+      .setAttribute("data-menu-open", "false");
+  }
+
+  const menuRef = useOutsideClick(handleOutsideClick, true);
 
   return (
     <>
-      <header
-        className={`${Styles.Header} ${showMenu ? Styles.MenuOpen : Styles.MenuClosed}`}
-      >
+      <header ref={menuRef} data-menu-open={false} className={Styles.Header}>
         <Logo />
         <NavigationContainer />
       </header>

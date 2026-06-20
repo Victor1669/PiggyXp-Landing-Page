@@ -7,25 +7,22 @@
     "module": "ESNext",
     "types": ["vite/client"],
     "skipLibCheck": true,
-
-    /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
-
-    /* Path mapping */
-    "baseUrl": "./src",
+    "resolveJsonModule": true,
     "paths": {
-      "@Hooks/*": ["Hooks/*"],
-      "@Components/*": ["Components/*"],
-      "@Contexts/*": ["Contexts/*"],
-      "@MainAssets/*": ["Layout/Main/assets/*"]
+      "@Data/*": ["./src/Data/*"],
+      "@Hooks/*": ["./src/Hooks/*"],
+      "@Contexts/*": ["./src/Contexts/*"],
+      "@Assets/*": ["./src/assets/*"],
+      "@UI/*": ["./src/UI/*"],
+      "@Utils/*": ["./src/Utils/*"],
+      "Types/*": ["./src/Types/*"]
     },
-
-    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,

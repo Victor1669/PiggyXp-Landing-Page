@@ -1,0 +1,36 @@
+.BrowserSearch {
+  display: block;
+  width: 75dvw;
+  position: relative;
+  margin-block: 30px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.TextContainer {
+  position: absolute;
+  top: 33%;
+  left: 4%;
+  width: 55%;
+  height: 50%;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar-thumb {
+    background-color: black;
+  }
+
+  &::-webkit-scrollbar {
+    background-color: gray;
+  }
+}
+
+.TextContainer p {
+  padding: 15px;
+  margin-right: 25px;
+  text-indent: 2rem;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.3rem;
+}

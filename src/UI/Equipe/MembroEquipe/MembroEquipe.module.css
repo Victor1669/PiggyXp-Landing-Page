@@ -1,0 +1,27 @@
+.MembroEquipe {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+
+  p {
+    margin-top: 10px;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 20px;
+  }
+}
+
+.MembroEquipe img {
+  &[data-unique-name="pessoa"] {
+    width: 200px;
+  }
+  &[data-unique-name="linkedin"] {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(61, 153, 228);
+  }
+}

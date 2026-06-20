@@ -1,0 +1,53 @@
+/* PADRÃO (DESKTOP) */
+.TitleImage {
+  width: 90dvw;
+
+  display: grid;
+  grid-template-areas: "h2 image" "h3 image";
+
+  margin-block: auto;
+
+  h2 {
+    grid-area: h2;
+    font-size: 3rem;
+  }
+
+  h3 {
+    grid-area: h3;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.5rem;
+  }
+}
+
+.PhoneImage {
+  grid-area: image;
+  width: 600px;
+}
+
+/* PRIMEIRA QUEBRA */
+@media only screen and (max-width: 1030px) {
+  .TitleImage {
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+  }
+  .PhoneImage {
+    width: 500px;
+    max-width: 50dvw;
+    margin-inline: auto;
+  }
+}
+
+/* TABLET */
+@media only screen and (max-width: 768px) {
+  .TitleImage {
+    grid-template-areas: "h2" "h3" "image";
+    gap: 20px;
+    text-align: center;
+  }
+}

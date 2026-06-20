@@ -1,0 +1,17 @@
+[
+  {
+    "imgSrc": "/CardsFinais/assets/Money.svg",
+    "imgAlt": "Imagem de notas de dinheiro, representando o controle sobre o dinheiro",
+    "text": "Aprenda a economizar, planejar e tomar decisões financeiras melhores."
+  },
+  {
+    "imgSrc": "/CardsFinais/assets/Evolution.svg",
+    "imgAlt": "Imagem de um raio, simbolizando a evolução",
+    "text": "Ganhe XP, complete missões e desenvolva hábitos financeiros inteligentes."
+  },
+  {
+    "imgSrc": "/CardsFinais/assets/Playing.svg",
+    "imgAlt": "Imagem de um controle de video-game, representando a experiência do aplicativo, que é jogando.",
+    "text": "Transforme o aprendizado financeiro em uma experiência divertida e interativa."
+  }
+]

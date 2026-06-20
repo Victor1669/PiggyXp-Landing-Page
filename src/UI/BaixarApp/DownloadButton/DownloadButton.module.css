@@ -1,0 +1,35 @@
+.DownloadButton {
+  width: 80%;
+  height: 56px;
+  background-color: #3873ca;
+
+  color: white;
+
+  border-radius: 20px;
+  box-shadow: #2d548d 0 4px 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 40px;
+
+  cursor: pointer;
+}
+
+/* TABLET */
+@media only screen and (min-width: 481px) and (max-width: 768px) and (min-height: 600px) {
+  .DownloadButton {
+    justify-self: flex-end;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 769px) and (min-height: 600px) {
+  .DownloadButton {
+    width: 350px;
+    justify-self: flex-end;
+    font-size: 1.25rem;
+  }
+}

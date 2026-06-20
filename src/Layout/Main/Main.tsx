@@ -1,39 +1,20 @@
-import { useShowMenu } from "@Contexts/useShowMenu";
+import Styles from "./Main.module.css";
 
-import { useOrientation } from "@Hooks/useOrientation";
-
-import Styles from "./Styles/Main.module.css";
-
-import DownloadApp from "./Components/1DownloadApp";
-import Project from "./Components/2Project/2Project";
-import AboutUs from "./Components/3AboutUs";
-import Team from "./Components/4Team";
-import CardsInfo from "./Components/5InfoCards";
+import BaixarApp from "@UI/BaixarApp/BaixarApp";
+import Equipe from "@UI/Equipe/Equipe";
+import ExplicacaoProjeto from "@UI/ExplicacaoProjeto/ExplicacaoProjeto";
+import SobreNos from "@UI/SobreNos/SobreNos";
+import CardsFinais from "@UI/CardsFinais/CardsFinais";
 
 export default function Main() {
-  const { setShowMenu } = useShowMenu();
-  const orientation = useOrientation();
-
   return (
-    <main className={Styles.Main} onClick={() => setShowMenu(false)}>
-      {orientation === "landscape" && <ScreenWarning />}
-      <DownloadApp />
-      <Project />
-      <AboutUs />
+    <main className={Styles.Main}>
+      <BaixarApp />
+      <ExplicacaoProjeto />
+      <SobreNos />
       <figure className={Styles.BackgroundImage} />
-      <Team />
-      <CardsInfo />
+      <Equipe />
+      <CardsFinais />
     </main>
-  );
-}
-
-function ScreenWarning() {
-  return (
-    <div className={Styles.ScreenWarning}>
-      <p>
-        Deixe seu celular/tablet em pé para poder ter o máximo da experiência
-        desse site
-      </p>
-    </div>
   );
 }

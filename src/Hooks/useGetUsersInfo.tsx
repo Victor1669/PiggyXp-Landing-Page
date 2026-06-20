@@ -1,0 +1,62 @@
+import { useEffect, useState } from "react";
+
+import UsersArray from "@Data/equipeDesenvolvedores.json";
+
+import type { UserWithImageType } from "Types/UserWithImageType";
+
+export default function useGetUsersInfo() {
+  const USERS_STORAGE = localStorage.getItem("USERS") ?? "[]";
+
+  const [usersWithImageArray, setUsersWithImageArray] = useState<
+    UserWithImageType[]
+  >(() => JSON.parse(USERS_STORAGE));
+
+  useEffect(() => {
+    async function GetUserInfo() {
+      if (JSON.parse(USERS_STORAGE).length) return;
+
+      const userImagesArray = await FetchGitHubUsers(
+        UsersArray.map((user) => user.username),
+      );
+
+      const usersWithImageArray: UserWithImageType[] = UsersArray.map(
+        (user, i) => {
+          const name = user.name;
+          const avatar_url = userImagesArray[i].avatar_url;
+          const linkedin = UsersArray[i].linkedin;
+          const github = UsersArray[i].github;
+          const stack = UsersArray[i].stack;
+
+          return { name, avatar_url, linkedin, github, stack };
+        },
+      );
+
+      setUsersWithImageArray(usersWithImageArray);
+      localStorage.setItem("USERS", JSON.stringify(usersWithImageArray));
+    }
+    GetUserInfo();
+  }, []);
+
+  return { usersWithImageArray };
+}
+
+async function FetchGitHubUsers(usersArray: string[]) {
+  const requests = usersArray.map((username) =>
+    fetch(`https://api.github.com/users/${username}`).then((res) => {
+      if (!res.ok) {
+        throw new Error(`Erro ao buscar ${username}.`);
+      }
+      return res.json();
+    }),
+  );
+
+  const responses = await Promise.all(requests);
+
+  const users = responses.map((user) => {
+    const { avatar_url } = user;
+
+    return { avatar_url };
+  });
+
+  return users;
+}
